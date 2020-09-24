@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/numero"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="15sp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="35dp"
+        android:text="tvContador"
+        android:textColor="#FFF"
+        android:gravity="center"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="15dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:layout_marginLeft="80sp"
+        android:layout_marginRight="80sp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        tools:layout_editor_absoluteX="10dp">
+
+        <Button
+            android:id="@+id/btnNegro"
+            android:background="@color/negro"
+            android:text="Black"
+            style="@style/boton"
+            android:onClick="cambiaColor"/>
+
+        <Button
+            android:id="@+id/btnRojo"
+            android:layout_weight="1"
+            android:background="@color/rojo"
+            android:text="RED"
+            style="@style/boton"
+            android:onClick="cambiaColor"/>
+
+        <Button
+            android:id="@+id/btnAzul"
+            android:layout_weight="1"
+            android:background="@color/azul"
+            android:text="BLUE"
+            style="@style/boton"
+            android:textColor="#FFF"
+            android:onClick="cambiaColor"/>
+
+        <Button
+            android:id="@+id/btnVerde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/verde"
+            android:text="Green"
+            android:textColor="#FFF"
+            android:onClick="cambiaColor"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="10dp">
+
+        <Button
+            android:id="@+id/btnCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Count"
+            android:onClick="incrementa"/>
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:onClick="reset"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
